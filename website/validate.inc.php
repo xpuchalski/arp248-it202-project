@@ -3,7 +3,7 @@
  require_once('database.php');
  $emailAddress = $_POST['email_address'];
  $password = $_POST['password'];
- $query = "SELECT first_name, last_name FROM guitar_users " .
+ $query = "SELECT first_name, last_name FROM book_users " .
         "WHERE email_address = ? AND password = SHA2(?,256)";
  $db = getDB();
  $stmt = $db->prepare($query);
