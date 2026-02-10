@@ -1,3 +1,4 @@
+# Alexander Puchalski, arp248, IT202-project, 2026-02-10
 CREATE DATABASE books;
 CREATE USER 'admin_user'@'localhost' IDENTIFIED BY 'admin';
 GRANT SELECT, UPDATE, INSERT, DELETE ON books.* TO 'admin_user'@'localhost';

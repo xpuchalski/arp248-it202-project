@@ -1,4 +1,5 @@
-<?php
+<?php // Alexander Puchalski, arp248, IT202-project, 2026-02-10
+
  function getDB($echo_mode = false) {
    $host = 'localhost';
    $port = 3306;

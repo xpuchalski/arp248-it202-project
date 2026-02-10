@@ -1,4 +1,4 @@
-<?php
+<?php // Alexander Puchalski, arp248, IT202-project, 2026-02-10
 if (!isset($_SESSION['login'])) {
 ?>
   <h2>Please log in to the books website</h2><br>

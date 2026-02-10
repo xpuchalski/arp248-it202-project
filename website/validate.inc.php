@@ -1,4 +1,4 @@
-<?php
+<?php // Alexander Puchalski, arp248, IT202-project, 2026-02-10
  error_log('$_POST ' . print_r($_POST, true));
  require_once('database.php');
  $emailAddress = $_POST['email_address'];

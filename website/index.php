@@ -1,4 +1,4 @@
-<?php
+<?php // Alexander Puchalski, arp248, IT202-project, 2026-02-10
 session_start();
 ?>
 <!DOCTYPE html>
