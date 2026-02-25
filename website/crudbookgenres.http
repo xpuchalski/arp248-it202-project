@@ -1,0 +1,20 @@
+POST http://localhost:3000/addgenre.test.php
+Content-Type: application/x-www-form-urlencoded
+
+genreID=4
+&genreCode=clwn
+&genreName=clown encyclopedia
+###
+GET http://localhost:3000/listgenre.test.php
+###
+POST http://localhost:3000/changegenre.test.php
+Content-Type: application/x-www-form-urlencoded
+
+genreID=4
+&genreCode=futh
+&genreName=future history
+###
+POST http://localhost:3000/removegenre.test.php
+Content-Type: application/x-www-form-urlencoded
+
+genreID=4

@@ -1,0 +1,36 @@
+POST http://localhost:3000/addbook.test.php
+Content-Type: application/x-www-form-urlencoded
+
+book_id=4
+&book_code=klnfr
+&book_title=Kilnfire
+&book_description= A fantastic fantasy
+&book_author=Alex P
+&book_genre=Fiction
+&book_genre_id=1
+&book_buy_price=10.00
+&book_sell_price=8.00
+
+###
+GET http://localhost:3000/listbook.test.php
+###
+POST http://localhost:3000/changebook.test.php
+Content-Type: application/x-www-form-urlencoded
+
+book_id=4
+&book_code=klnfr
+&book_title=Kilnfire publisher ed.
+&book_description= A fantastic fantasy
+&book_author=Alex P
+&book_genre=Fiction
+&book_genre_id=1
+&book_buy_price=10.00
+&book_sell_price=8.00
+
+###
+POST http://localhost:3000/removebook.test.php
+Content-Type: application/x-www-form-urlencoded
+
+book_id=4
+
+// $book_id, $book_code, $book_title, $book_description, $book_author, $book_genre, $book_genre_id, $book_buy_price, $book_sell_price
