@@ -1,3 +1,5 @@
+# Alexander Puchalski, arp248, IT202-project, 2026-02-10
+
 POST http://localhost:3000/addbook.test.php
 Content-Type: application/x-www-form-urlencoded
 
@@ -12,7 +14,7 @@ book_id=4
 &book_sell_price=8.00
 
 ###
-GET http://localhost:3000/listbook.test.php
+GET http://localhost:3000/listbooks.test.php
 ###
 POST http://localhost:3000/changebook.test.php
 Content-Type: application/x-www-form-urlencoded

@@ -1,4 +1,6 @@
 <?php
+# Alexander Puchalski, arp248, IT202-project, 2026-02-10
+
 require_once('database.php');
 class book
 {

@@ -1,3 +1,5 @@
+# Alexander Puchalski, arp248, IT202-project, 2026-02-10
+
 USE books;
 CREATE TABLE book_genres (
  genre_id       INT            NOT NULL,
@@ -16,4 +18,4 @@ INSERT INTO book_genres (genre_id, genre_code, genre_name) VALUES
 
 DROP TABLE books.book_genres;
 
-SELECT * FROM book_genres;
+SELECT genre_name, date_time_created, date_time_updated FROM book_genres;

@@ -1,4 +1,6 @@
 <?php
+# Alexander Puchalski, arp248, IT202-project, 2026-02-10
+
 require_once("bookgenre.php");
 $genreID = $_POST['genreID'];
 if ((trim($genreID) == '') or (!is_numeric($genreID))) {

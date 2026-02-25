@@ -1,4 +1,6 @@
 <?php
+# Alexander Puchalski, arp248, IT202-project, 2026-02-10
+
 require_once("individualbooks.php");
 $book_id = $_POST['book_id'];
 if ((trim($book_id) == '') or (!is_numeric($book_id))) {

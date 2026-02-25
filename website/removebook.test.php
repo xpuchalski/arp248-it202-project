@@ -1,4 +1,6 @@
 <?php
+# Alexander Puchalski, arp248, IT202-project, 2026-02-10
+
 error_log('$_POST ' . print_r($_POST, true));
 require_once("individualbooks.php");
 $book_id = $_POST['book_id'];
