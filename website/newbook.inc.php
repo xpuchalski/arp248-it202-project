@@ -41,6 +41,10 @@
             <td>Sell Price:</td>
             <td><input type="text" name="book_sell_price" size="10"></td>
         </tr>
+                <tr>
+            <td>Buy Price:</td>
+            <td><input type="text" name="book_buy_price" size="10"></td>
+        </tr>
     </table><br>
     <input type="submit" value="Submit New Book">
     <input type="hidden" name="content" value="addbook">

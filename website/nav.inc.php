@@ -48,10 +48,10 @@
         <tr>
           <td>
             <form action="index.php" method="post">
-              <label>Search for Book by Genre:</label><br>
+              <label>Update Book:</label><br>
               <input type="text" name="book_id" size="14" />
               <input type="submit" value="find" />
-              <input type="hidden" name="content" value="displaybook" />
+              <input type="hidden" name="content" value="updatebook" />
             </form>
           </td>
         </tr>

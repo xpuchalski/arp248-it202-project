@@ -53,6 +53,10 @@ if (!isset($_POST['book_id']) or (!is_numeric($_POST['book_id']))) {
           <td>Sell Price</td>
           <td><input type="text" name="book_sell_price" value="<?php echo $book->book_sell_price; ?>"></td>
         </tr>
+        <tr>
+          <td>Buy Price</td>
+          <td><input type="text" name="book_buy_price" value="<?php echo $book->book_buy_price; ?>"></td>
+        </tr>
       </table><br><br>
       <input type="submit" name="answer" value="Update Book">
       <input type="submit" name="answer" value="Cancel">

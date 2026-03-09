@@ -10,50 +10,21 @@ if (!isset($_REQUEST['book_id']) or (!is_numeric($_REQUEST['book_id']))) {
 } else {
  $bookID = $_REQUEST['book_id'];
  $book = book::findBook($bookID);
- if ($book) {
-   $books = book::getBooksByGenre($book->book_genre_id);
-   if ($books) {
- ?>
-     <br><br>
-     <b>Books:</b><br>
-     <table>
-       <tr>
-        <th>Book ID</th>
-        <th>Title</th>
-        <th>Code</th>
-        <th>Description</th>
-        <th>Author</th>
-        <th>Genre</th>
-        <th>Price</th>
-       </tr>
-       <?php
-       $booktotal = 0;
-       foreach ($books as $book) {
-       ?>
-         <tr>
-           <td><?php echo $book->book_id; ?></td>
-           <td><?php echo $book->book_title; ?></td>
-           <td><?php echo $book->book_code; ?></td>
-           <td><?php echo $book->book_description; ?></td>
-           <td><?php echo $book->book_author; ?></td>
-           <td><?php echo $book->book_genre; ?></td>
-           <td><?php echo '$' . number_format($book->book_sell_price, 2); ?></td>
-         </tr>
-       <?php
-         $booktotal = $booktotal + $book->book_sell_price;
-       }
-       ?>
-       <tr>
-         <td></td>
-         <td>Total</td>
-         <td><?php echo '$' . number_format($booktotal, 2); ?></td>
-       </tr>
-     </table>
-<?php
-   } else {
-     echo "<h2>There are no items for this category</h2>\n";
-   }
- } else {
+  if($book) {
+    echo "<p>Book ID: $book->book_id</p>" .
+      "<p>Title: $book->book_title</p>\n" .
+      "<p>Code: $book->book_code</p>\n" .
+      "<p>Description: $book->book_description</p>\n" .
+      "<p>Author: $book->book_author</p>\n" .
+      "<p>Genre: $book->book_genre</p>\n";
+      "<p>Buy Price: $book->book_buy_price</p>\n" .
+      "<p>Sell Price: $book->book_sell_price</p>\n";
+  }
+ 
+  else if (!$book) {
+   echo "<h2>There are no books for  with this ID</h2>\n";
+  }
+  else {
    echo "<h2>Sorry, category $categoryID not found</h2>\n";
  }
 }
