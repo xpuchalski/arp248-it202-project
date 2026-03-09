@@ -1,4 +1,4 @@
-<?php // Alexander Puchalski, arp248, IT202-project, 2026-02-10
+<?php
 if (isset($_SESSION['login'])) {
    unset($_SESSION['login']);
 }

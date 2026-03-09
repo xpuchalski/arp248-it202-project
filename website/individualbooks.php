@@ -138,5 +138,33 @@ class book
        $db->close();
        return $result;
    }
+    static function getBooksByGenre($genreID)
+   {
+       $db = getDB();
+       $query = "SELECT * from book_listing where book_genre_id = $genreID";
+       $result = $db->query($query);
+       if (mysqli_num_rows($result) > 0) {
+           $books = array();
+           while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+               $book = new Book(
+                   $row['book_id'],
+                   $row['book_code'],
+                   $row['book_title'],
+                   $row['book_description'],
+                   $row['book_author'],
+                   $row['book_genre'],
+                   $row['book_genre_id'],
+                   $row['book_buy_price'],
+                   $row['book_sell_price']
+               );
+               array_push($books, $book);
+           }
+           $db->close();
+           return $books;
+       } else {
+           $db->close();
+           return NULL;
+       }
+   }
 }
 ?>

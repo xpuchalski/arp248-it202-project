@@ -1,8 +1,7 @@
 # Alexander Puchalski, arp248, IT202-project, 2026-02-10
 CREATE DATABASE books;
 CREATE USER 'admin_user'@'localhost' IDENTIFIED BY 'admin';
-GRANT ALL PRIVILEGES ON books.* TO 'admin_user'@'localhost';
-USE books;
+GRANT SELECT, LOCK TABLES, SHOW VIEW, EVENT, TRIGGER ON books TO 'admin_user'@'localhost';
 CREATE TABLE book_users (
     book_user_id INT NOT NULL AUTO_INCREMENT,
     email_address VARCHAR(255) NOT NULL UNIQUE,
@@ -28,3 +27,4 @@ INSERT INTO book_users
 VALUES
 ('hkoch@books.com', SHA2('password', 256),'She/Her', 'honey', 'koch','416-8888');
 SELECT * FROM book_users;
+
