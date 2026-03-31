@@ -1,0 +1,144 @@
+:root {
+    font-family: 'Courier New', Courier, monospace;
+    --primary-color: #63452f;
+    --secondary-color: #f7f198;
+    --accent-color: #eeeeee;
+    --background-color: #f2f9da;
+    --text-color: #121212;
+}
+
+body {
+   font-size: 110%;
+   background-color: var(--background-color);
+   color: var(--text-color);
+   margin: 0px;
+   padding: 0px;
+   overflow-x: hidden;
+}
+
+footer {
+   font-size: 80%;
+   background-color: var(--primary-color);
+   color: var(--accent-color);
+   padding: 5px;
+}
+
+
+
+main {
+   padding: 25px;
+   float: left;
+   width: 75%;
+}
+
+main table {
+   padding: 2px;
+}
+
+main td {
+   padding: 2px;
+}
+
+
+
+header {
+   width: 100%;
+}
+
+.navigation {
+    float: left;
+    height: 770px;
+   padding: 5px;
+   color: var(--text-color);
+   background-color: var(--secondary-color);
+   width: 15%;
+}
+footer {
+    clear: both;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+a, a:link {
+  color: var(--primary-color);
+}
+
+a:active {
+  color: var(--accent-color);
+}
+
+nav a, nav a:link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--text-color);
+}
+
+nav a:active {
+  color: var(--accent-color);
+}
+
+
+
+input {
+ border: 2px solid var(--text-color);
+ background-color: var(--accent-color);
+ color: var(--text-color);
+ border-radius: 5px;
+}
+
+input[type=submit] {
+ font-size: 80%;
+}
+
+input:required:invalid {
+ border-color: #872c14;
+ background-color: var(--accent-color);
+}
+
+input:required:valid {
+ border-color: var(--secondary-color);
+ background-color: var(--accent-color);
+}
+
+input:focus {
+ outline: none;
+ border-color: var(--text-color);
+ background-color: var(--accent-color);
+ box-shadow: 0 0 5px var(--accent-color);
+}
+
+
+
+.header-div {
+    background-color: var(--primary-color);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+.header-div img {
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+}
+.header-div h1,
+.header-div h2 {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+
+
+td {
+   padding: 5px;
+}
+
+select {
+   font-size: 110%;
+}

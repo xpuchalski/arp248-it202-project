@@ -10,8 +10,8 @@ if (isset($_SESSION['login'])) {
   } else if (Genre::findGenre($genreID)) {
     echo "<h2>A genre with the ID #$genreID already exists</h2>\n";
   } else {
-    $genreCode = $_POST['genreCode'];
-    $genreName = $_POST['genreName'];
+    $genreCode = htmlspecialchars($_POST['genreCode']);
+    $genreName = htmlspecialchars($_POST['genreName']);
     $genre = new Genre($genreID, $genreCode, $genreName);
     $result = $genre->saveGenre();
     if ($result) {

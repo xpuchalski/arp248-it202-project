@@ -6,15 +6,15 @@
    <table cellpadding="1" border="0">
        <tr>
            <td>Genre ID:</td>
-           <td><input type="text" name="genreID" size="4"></td>
+           <td><input type="text" name="genreID" size="4" required></td>
        </tr>
        <tr>
            <td>Genre Code:</td>
-           <td><input type="text" name="genreCode" size="20"></td>
+           <td><input type="text" name="genreCode" size="20" required></td>
        </tr>
        <tr>
            <td>Genre Name:</td>
-           <td><input type="text" name="genreName" size="20"></td>
+           <td><input type="text" name="genreName" size="20" required></td>
        </tr>
    </table><br>
    <input type="submit" value="Submit New Genre">

@@ -2,8 +2,8 @@
 // Alexander Puchalski, arp248, IT202-project, 2026-02-10
  error_log('$_POST ' . print_r($_POST, true));
  require_once('database.php');
- $emailAddress = $_POST['email_address'];
- $password = $_POST['password'];
+ $emailAddress = htmlspecialchars(filter_var($_POST['email_address'], FILTER_SANITIZE_EMAIL));
+ $password = htmlspecialchars($_POST['password']);
  $query = "SELECT first_name, last_name FROM book_users " .
         "WHERE email_address = ? AND password = SHA2(?,256)";
  $db = getDB();

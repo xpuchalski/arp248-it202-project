@@ -9,12 +9,13 @@ require_once("individualbooks.php");
 <html>
     <head>
         <title>Inventory Helper</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <header>
             <?php include("header.inc.php"); ?>
         </header>
-        <section style="height: 425px;">
+        <section>
             <nav>
                 <?php include("nav.inc.php"); ?>
             </nav>

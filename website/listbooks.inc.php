@@ -18,7 +18,7 @@ if ($books) {
            $bookAuthor = $book->book_author;
            $bookGenre = $book->book_genre;
            $bookPrice = $book->book_sell_price;
-           $option = $bookID . " - " . $bookTitle .  " - " . $bookPrice;
+           $option = $bookID . " - " . $bookTitle .  " - " . $bookAuthor . " - " . $bookGenre;
            if($first) {
                 echo "<option value=\"$bookID\" selected>$option</option>\n";
                 $first = false;

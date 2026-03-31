@@ -12,7 +12,7 @@ if ($genres) {
        $first = true;
        foreach ($genres as $genre) {
            $genreID = $genre->genreID;
-           $name = $genreID . " - " . $genre->genreCode . ", " . $genre->genreName;
+           $name = $genreID . " - " . $genre->genreCode . " - " . $genre->genreName;
            if($first) {
                 echo "<option value=\"$genreID\" selected>$name</option>\n"; 
                 $first = false;

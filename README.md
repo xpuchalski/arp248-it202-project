@@ -4,3 +4,11 @@
 
 # TO DO
 add displays, changes adds, change lists, change changes, change removes, add upadates, change html and syntaxes
+
+colors :
+
+#63452f
+#f2f9da
+#f7f198
+#eeeeee
+#121212

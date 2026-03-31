@@ -5,23 +5,23 @@
     <table cellpadding="1" border="0">
         <tr>
             <td>Book ID:</td>
-            <td><input type="text" name="book_id" size="4"></td>
+            <td><input type="text" name="book_id" size="4" required type="number"></td>
         </tr>
         <tr>
             <td>Book Code:</td>
-            <td><input type="text" name="book_code" size="20"></td>
+            <td><input type="text" name="book_code" size="20" required></td>
         </tr>
         <tr>
             <td>Book Title:</td>
-            <td><input type="text" name="book_title" size="20"></td>
+            <td><input type="text" name="book_title" size="20" required></td>
         </tr>
         <tr>
             <td>Book Description:</td>
-            <td><input type="text" name="book_description" size="20"></td>
+            <td><input type="text" name="book_description" size="20" required></td>
         </tr>
         <tr>
             <td>Book Author:</td>
-            <td><input type="text" name="book_author" size="20"></td>
+            <td><input type="text" name="book_author" size="20" required></td>
         </tr>
         <tr>
             <td>Genre:</td>
@@ -39,11 +39,11 @@
         </tr>
         <tr>
             <td>Sell Price:</td>
-            <td><input type="text" name="book_sell_price" size="10"></td>
+            <td><input type="text" name="book_sell_price" size="10" required type="number" step="0.01"></td>
         </tr>
                 <tr>
             <td>Buy Price:</td>
-            <td><input type="text" name="book_buy_price" size="10"></td>
+            <td><input type="text" name="book_buy_price" size="10" required type="number" step="0.01"></td>
         </tr>
     </table><br>
     <input type="submit" value="Submit New Book">
