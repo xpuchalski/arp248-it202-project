@@ -1,0 +1,28 @@
+function getRealTime() {
+ // retrieve the DOM objects to place the content
+ var domcategories = document.getElementById("genreElement");
+ var domitems = document.getElementById("booksElement");
+ var domlistpricetotal = document.getElementById("listpricetotal");
+ // send the GET request to realtime.php to retrieve the data using XMLHttpRequest
+ var request = new XMLHttpRequest();
+ request.open("GET", "realtime.php", true);
+ request.onreadystatechange = function () {
+   if (request.readyState == 4 && request.status == 200) {
+     // parse the XML document to get each data element
+     var xmldoc = request.responseXML;
+     var xmlcategories = xmldoc.getElementsByTagName("categories")[0];
+     var categories = xmlcategories.childNodes[0].nodeValue;
+     var xmlitems = xmldoc.getElementsByTagName("items")[0];
+     var items = xmlitems.childNodes[0].nodeValue;
+     var xmllistpricetotal = xmldoc.getElementsByTagName("listpricetotal")[0];
+     var listpricetotal = xmllistpricetotal.childNodes[0].nodeValue;
+     var xmlbuypricetotal = xmldoc.getElementsByTagName("buypricetotal")[0];
+     var buypricetotal = xmlbuypricetotal.childNodes[0].nodeValue;
+     domcategories.innerHTML = categories;
+     domitems.innerHTML = items;
+     domlistpricetotal.innerHTML = listpricetotal;
+     document.getElementById("buypricetotal").innerHTML = buypricetotal;
+   }
+ };
+ request.send();
+}

@@ -3,7 +3,7 @@
 
 error_log('$_POST ' . print_r($_POST, true));
 require_once("bookgenre.php");
-$genreID = $_POST['genreID'];
+$genreID = $_POST['genreID'] ?? '';
 if ((trim($genreID) == '') or (!is_numeric($genreID))) {
  echo "<h2>Enter a valid genreID</h2>\n";
 } else if (!Genre::findGenre($genreID)) {

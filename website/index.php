@@ -10,11 +10,23 @@ require_once("individualbooks.php");
     <head>
         <title>Inventory Helper</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <script src="realtime.js"></script>
     </head>
-    <body>
+    
+    <body onload="getRealTime(); setInterval(getRealTime, 5000);">
         <header>
             <?php include("header.inc.php"); ?>
         </header>
+                    <?php if (isset($_SESSION['login'])) { ?>
+            <aside>
+                <?php include("aside.inc.php"); ?>
+                <script>
+                    getRealTime();
+                    setInterval(getRealTime, 5000);
+                </script>
+            </aside>
+            <?php } ?>
         <section>
             <nav>
                 <?php include("nav.inc.php"); ?>

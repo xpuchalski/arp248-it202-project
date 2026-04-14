@@ -3,7 +3,7 @@
 
 error_log('$_POST ' . print_r($_POST, true));
 require_once("individualbooks.php");
-$book_id = $_POST['book_id'];
+$book_id = $_POST['book_id'] ?? $_POST['bookID'] ?? '';
 if ((trim($book_id) == '') or (!is_numeric($book_id))) {
  echo "<h2>Enter a valid ID</h2>\n";
 } else if (!book::findbook($book_id)) {

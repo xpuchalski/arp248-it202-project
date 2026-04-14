@@ -59,8 +59,9 @@ if (!isset($_POST['book_id']) or (!is_numeric($_POST['book_id']))) {
         </tr>
       </table><br><br>
       <input type="submit" name="answer" value="Update Book">
+      <input type="submit" name="answer" value="Delete Book">
       <input type="submit" name="answer" value="Cancel">
-      <input type="hidden" name="bookID" value="<?php echo $bookID; ?>">
+      <input type="hidden" name="book_id" value="<?php echo $bookID; ?>">
       <input type="hidden" name="content" value="changebook">
     </form>
   <?php

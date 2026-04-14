@@ -23,7 +23,17 @@ footer {
    padding: 5px;
 }
 
-
+aside {
+   top: 10%; right: 0;
+   background-color:var(--secondary-color);
+   color: var(--primary-color);
+   position: absolute;
+   font-size: 75%;
+   padding: 15px;
+   float: right;
+   width: 240px;
+   height: 85%;
+}
 
 main {
    padding: 25px;

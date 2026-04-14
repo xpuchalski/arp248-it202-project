@@ -120,10 +120,10 @@ class book
    function updatebook()
    {
        $db = getDB();
-       $query = "UPDATE book_listing SET book_id = ?, book_code = ?, book_title = ?, book_description = ?, book_author = ?, book_genre = ?, book_genre_id = ?, book_buy_price = ?, book_sell_price = ? WHERE book_id = $this->book_id";
+       $query = "UPDATE book_listing SET book_id = ?, book_code = ?, book_title = ?, book_description = ?, book_author = ?, book_genre = ?, book_genre_id = ?, book_buy_price = ?, book_sell_price = ? WHERE book_id = ?";
        $stmt = $db->prepare($query);
        $stmt->bind_param(
-           "isssssidd",
+           "isssssiddi",
            $this->book_id,    
            $this->book_code,   
            $this->book_title, 
@@ -133,6 +133,7 @@ class book
            $this->book_genre_id,
            $this->book_buy_price,
            $this->book_sell_price,
+           $this->book_id
        );
        $result = $stmt->execute();
        $db->close();
@@ -163,6 +164,44 @@ class book
            return $books;
        } else {
            $db->close();
+           return NULL;
+       }
+   }
+
+   static function getTotalBooks()
+   {
+       $db = getDB();
+       $query = "SELECT COUNT(book_id) FROM book_listing";
+       $result = $db->query($query);
+       $row = $result->fetch_array();
+       if ($row) {
+           return $row[0];
+       } else {
+           return NULL;
+       }
+   }
+
+   static function getTotalListPrice()
+   {
+       $db = getDB();
+       $query = "SELECT SUM(book_sell_price) FROM book_listing";
+       $result = $db->query($query);
+       $row = $result->fetch_array();
+       if ($row) {
+           return $row[0];
+       } else {
+           return NULL;
+       }
+   }
+    static function getTotalBuyPrice()
+   {
+       $db = getDB();
+       $query = "SELECT SUM(book_buy_price) FROM book_listing";
+       $result = $db->query($query);
+       $row = $result->fetch_array();
+       if ($row) {
+           return $row[0];
+       } else {
            return NULL;
        }
    }
