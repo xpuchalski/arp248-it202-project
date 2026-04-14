@@ -28,7 +28,7 @@ if (!isset($_POST['genreID']) or (!is_numeric($_POST['genreID']))) {
         </tr>
       </table><br><br>
       <input type="submit" name="answer" value="Update Genre">
-      <input type="button" value="Delete Genre" data-delete-message="<?php echo htmlspecialchars('Delete genre ' . $genre->genreName . '?', ENT_QUOTES); ?>" onclick="showDeleteConfirmation(this.form, this.dataset.deleteMessage, 'Delete Genre');">
+      <input type="submit" name="answer" value="Delete Genre">
       <input type="submit" name="answer" value="Cancel">
       <input type="hidden" name="genreID" value="<?php echo $genreID; ?>">
       <input type="hidden" name="content" value="changegenre">
